@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+/**
+ * Created by ankita on 03-06-2023.
+ * *Example:*
+ Given array: [1, 2, 3, 4, 5, 6, 7]
+ Rotate by 3 places to the right.
+ Output: [5, 6, 7, 1, 2, 3, 4]
+
+ */
+public class StringProgram {
+    public static void main(String[] args) {
+
+        System.out.println("hi");
+        int [] arr = new int [] {1, 2, 5, 8, 7,9};
+        int n=3;
+        for(int i = 0; i < n; i++){
+            int j, last;
+            last = arr[arr.length-1];
+
+            for(j = arr.length-1; j > 0; j--){
+                arr[j] = arr[j-1];//8
+            }
+            arr[0] = last;
+        }
+
+        System.out.println();
+        for(int i = 0; i< arr.length; i++){
+            System.out.print(arr[i]);
+        }
+    }
+
+}
+
+
+
