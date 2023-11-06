@@ -1,0 +1,22 @@
+/**
+ * Created by ankit on 06-11-2023.
+ */
+/*Problem:You are given a sorted array arr[] and a number x. Write a function
+        that efficiently counts the occurrences of x in arr[]. The expected
+        time complexity of the solution should be O(Logn)
+        .Examples:Input: arr[] = {1, 1, 2, 2, 2, 2, 3}, x = 2 Output: 4 // The value 2 occurs 4 times in the array arr[]*/
+public class arrayProgram {
+    public static void main(String[] args) {
+        int arr[]=new int[]{1, 1, 2, 2, 2, 2, 3};
+        int x=2;
+        int count=0;
+        for (int i=0;i<=arr.length-1;i++)
+        {
+           if(x==arr[i])
+           {
+            count++;
+           }
+        }
+        System.out.println("count"+count);
+    }
+}
