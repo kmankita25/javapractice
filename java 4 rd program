@@ -1,0 +1,30 @@
+
+/*Problem: Given a string containing both uppercase and lowercase letters, rearrange the characters so that all uppercase letters come before all lowercase letters while maintaining the original order of uppercases and lowercases in the rearranged string.
+
+Example:
+
+Input: "aBcDeFgH"
+Output: "BDFHaceg" - where all uppercase letters ('BDFH') appear before all lowercase letters ('aceg'), but the relative order of uppercase and lowercase letters is maintained.*/
+public class arrayProgram {
+    public static void main(String[] args) {
+        String s="aBcDeFgH";
+        StringBuilder uppercase=new StringBuilder();
+        StringBuilder lowercase=new StringBuilder();
+       for (int i=0;i<=s.length()-1;i++)
+       {
+           char ch=s.charAt(i);
+           if (Character.isUpperCase(ch))
+          {
+              uppercase.append(ch);
+          }
+           else
+          {
+              lowercase.append(ch);
+          }
+       }
+
+        uppercase.append(lowercase);
+        System.out.println(uppercase);
+    }
+
+}
